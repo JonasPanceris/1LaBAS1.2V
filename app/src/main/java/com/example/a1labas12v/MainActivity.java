@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button butChandeeColor;
+    private Button butChandigText;
     private TextView tvTextChaningColor;
 
     @Override
@@ -20,7 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         tvTextChaningColor = (TextView) findViewById(R.id.tvTextChaningColor);
         butChandeeColor = (Button) findViewById(R.id.butChandeeColor);
+        butChandigText = (Button) findViewById(R.id.butChandigText);
         butChandeeColor.setOnClickListener(this);
+        butChandigText.setOnClickListener(this);
     }
 
     @Override
@@ -29,6 +32,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view.getId()==R.id.butChandeeColor) {
 
                 tvTextChaningColor.setTextColor(Color.LTGRAY);
+
+        }
+
+        if (view.getId()==R.id.butChandigText) {
+
+            tvTextChaningColor.setText("Labas");
 
         }
     }
